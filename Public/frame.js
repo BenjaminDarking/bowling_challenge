@@ -18,8 +18,8 @@ Frame.prototype.totalFrame = function() {
 }
 
 Frame.prototype.roll1 = function(roll) {
-  if (roll == 10) {
-    this.totalFrame()
+  if (roll === 10) {
+    this.score1 = roll
     return this.isStrike = true;
   }
   return this.score1 += roll;

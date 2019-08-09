@@ -21,4 +21,17 @@ describe("Game", function() {
       expect(game.getScorecard()).toEqual(18)
     })
   })
-});
+  describe("bowling a strike", function() {
+    it('user bowls a strike first roll, scores correctly and mocves to next frame', function() {
+      var game = new Game();
+      var frame = new Frame();
+
+      frame.roll1(10)
+      game.addFrame(frame)
+      game.updateScore(frame)
+      console.log(frame)
+      console.log(game)
+      expect(game.scorecard).toEqual(10)
+    })
+  })
+})

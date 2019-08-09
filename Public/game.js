@@ -13,3 +13,7 @@ Game.prototype.addFrame = function(frame) {
   this.gamePlay.push(frame)
   this.scorecard += frame.frameScore;
 }
+
+Game.prototype.updateScore = function(frame) {
+  this.scorecard += frame.score1 + frame.score2
+}
